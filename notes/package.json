@@ -1,0 +1,18 @@
+{
+  "name": "notes",
+  "private": true,
+  "workspaces": [
+    "html-container",
+    "navigation-bar-app",
+    "vue-board-app",
+    "dice-game-app",
+    "authentication-app"
+  ],
+  "scripts": {
+    "start": "lerna run start --parallel"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "lerna": "^8.2.1"
+  }
+}
