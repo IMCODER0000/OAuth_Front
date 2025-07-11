@@ -30,6 +30,8 @@ const SocialAuthenticationButtons: React.FC = () => {
             alert("팝업이 차단되었습니다. 허용 후 다시 시도하세요.");
             return;
         }
+        
+        console.log("오리긴 : " +  env.origins);
 
         const allowedOrigins = env.origins[provider];
 
@@ -73,6 +75,7 @@ const SocialAuthenticationButtons: React.FC = () => {
 
             if (accessToken) {
                 localStorage.setItem("userToken", accessToken);
+                console.log("토 큰 저 장");
                 window.dispatchEvent(new Event("user-token-changed"));
                 setTimeout(() => navigate("/"), 100);
                 return;
